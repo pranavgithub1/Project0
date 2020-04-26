@@ -1,0 +1,73 @@
+.title h1 {
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+.title h4 {
+  color: lightslategrey;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.title span {
+  font-weight: bold;
+  font-family: Consolas;
+}
+
+body {
+  padding-top: 50px;
+}
+
+#main {
+  padding: 20px;
+  background-color: white;
+}
+
+#beforeExample::before {
+  content: "\21d2 Click here: ";
+  font-weight: bold;
+}
+
+#selectExample::-moz-selection {
+  color: red;
+  background-color: yellow;
+}
+
+#selectExample::selection {
+  color: red;
+  background-color: yellow;
+}
+
+#selectionTable {
+  border: 1px solid;
+}
+
+#selectionTable th, #selectionTable td {
+  padding: 20px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.success, .failure, .warning {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.success {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.failure {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.warning {
+  background-color: rgba(235, 213, 52, 0.5);
+}
+/*# sourceMappingURL=style.css.map */

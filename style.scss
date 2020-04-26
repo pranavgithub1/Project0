@@ -1,0 +1,68 @@
+.title {
+    h1 {
+        color: black;
+        text-align: center;
+        padding: 20px;
+    }
+    h4 {
+        color: lightslategrey;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    span {
+        font-weight: bold;
+        font-family: Consolas;
+    }
+}
+
+
+
+body {
+    padding-top: 50px;
+}
+
+#main {
+   padding: 20px;
+   background-color: white;
+}
+
+#beforeExample::before {
+    content: "\21d2 Click here: ";
+    font-weight: bold;
+}
+
+#selectExample::selection {
+    color: red;
+    background-color: yellow;
+}
+
+#selectionTable {
+    border: 1px solid;
+    th, td {
+        padding: 20px;
+        border: 1px solid;
+        text-align: center;
+    }
+}
+
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+.success {
+    @extend %message;
+    background-color: rgba(0,128,0,0.5);
+}
+.failure {
+    @extend %message;
+    background-color: rgba(255,0,0,0.5);
+}
+.warning {
+    @extend %message;
+    background-color: rgba(235, 213, 52,0.5);
+}

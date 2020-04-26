@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lecture_0_Part_0</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand" href="index.html">1 - 1</a>
+            
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Lecture0-0.html">Lecture 0 - Part 0</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Lecture0-1.html">Lecture 0 - Part 1</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Lecture1-0.html">Lecture 1 - Part 0</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Lecture1-1.html">Lecture 1 - Part 1</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row" id="title">
+                <div class="col">
+                    <div class="title">
+                        <h4>CSS</h4>
+                        <p>If you had an ordered html list and wanted to style items in the list (descendants) then you would do:</p><br>
+                        <xmp>
+                            ol li {
+                                
+                            }                            
+                        </xmp>
+                        <p>
+                            Which means to select all list elements within that are descendants of ordered lists. 
+                            The space operator selects any descendants of an element. This will give all descendants of the ordered list (including sub unordered lists). If you only want direct descendants use “>” instead of “ “.
+                        </p>
+                        <xmp>
+                            input[type=”text”] {
+                                background-color: red;
+                            }
+                        </xmp>
+                        <p>means all input fields of type text should be red</p>
+                        <b>Psuedo-classes and psuedo-elements</b>
+                        <xmp>
+                            button {
+                                some styling
+                                background-color: red;
+                            }
+                            
+                            button:hover{
+                                background-color: green;
+                            }                           
+                        </xmp>
+                        <p>“:hover” is a <span>psuedo-class</span>. This allows the button to change color when you hover it.</p>
+                        <p></p>
+                        <xmp>
+                            HTML:
+                            <a href="#"> a link </a>
+
+                            css:
+                            a::before {
+                                content: "\21d2 Click here: ";
+                                font-weight: bold;
+                            }
+                        </xmp>
+                        <p>::before is a psuedo element that allows you to insert next before an element.
+                            The above code produces the following result:
+                        </p>
+                        <a href="#" id="beforeExample"> a link </a>
+                        <p>Another cool psuedo-element is ::selection</p>
+                        <xmp>
+                            p::selection {
+                                color: red;
+                                background-color: yellow;
+                            }
+                        </xmp>
+                        <p id="selectExample">To see what the code above does, try selecting this text.</p>
+                        <b>CSS selection operators</b><br>
+                        <table id="selectionTable">
+                            <tr>
+                                <th id="tableHead">operator</th>
+                                <th id="tabelHead">usage</th>
+                            </tr>
+
+                            <tr><td>a, b</td><td>Multiple Element Selector</td></tr>
+                            <tr><td>a b</td><td>Descendant Selector</td></tr>
+                            <tr><td>a > b</td><td>Child Selector</td></tr>
+                            <tr><td>a + b</td><td>Adjacent Sibling Selector</td></tr>
+                            <tr><td>[a=b]</td><td>Attribute Selector</td></tr>
+                            <tr><td>a:b</td><td>Pseudoclass Selector</td></tr>
+                            <tr><td>a::b</td><td>Psuedoelement Selector</td></tr>
+
+                        </table>
+
+                        <h4>Sass (.scss)</h4>
+                        <p>A language built on top of css so we can programatically generate style sheets.</p>
+
+                        <p>For example if we wanted to use the same color to style many elements and be able to change it easily we could define a variable:</p>
+                        <xmp>
+                            $color: red;
+                        </xmp>
+                        <p>Now everywhere we put <span>$color</span> it will be interpeted as red.</p>
+                        <p>We can also use styling inheritance with sass: </p>
+                        <xmp>
+                            %message {
+                                font-family: sans-serif;
+                                font-size: 18px;
+                                font-weight: bold;
+                                border: 1px solid black;
+                                padding: 20px;
+                                margin: 20px;
+                            }
+                            .success {
+                                @extend %message;
+                                background-color: green;
+                            }
+                            .failure {
+                                @extend %message;
+                                background-color: red;
+                            }
+                            .warning {
+                                @extend %message;
+                                background-color: yellow;
+                            }
+                            HTML:
+                            <div class="success">Success</div>
+                            <div class="failure">Failure</div>
+                            <div class="warning">Warning</div>
+                            
+                        </xmp>
+                        <p>This allows us to easily create these: </p>
+                        <div class="success">Success</div>
+                        <div class="failure">Failure</div>
+                        <div class="warning">Warning</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
